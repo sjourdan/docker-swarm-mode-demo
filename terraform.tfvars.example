@@ -1,0 +1,8 @@
+do_token = "123456"
+ssh_key_file = "~/.ssh/somekey"
+do_region = "ams3"
+do_droplet_size = "512mb"
+swarm_nodes = 2
+swarm_manager_nodes = 1
+do_image = "fedora-23-x64"
+swarm_token = "123456789"
