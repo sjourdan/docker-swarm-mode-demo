@@ -1,6 +1,6 @@
 # Docker Swarm Mode (>= Docker 1.12)
 
-This docker cluster is running on Docker Swarm (new 1.12 mode).
+This docker cluster is running on Docker Swarm (new 1.12 mode). Warning: this was written with a pre-release version of Docker 1.12 - things work differently in the final release. 
 
 ## Requirements
 
@@ -30,3 +30,4 @@ Join a member to the Swarm:
 ## Troubleshooting
 
 ## Known Bugs
+  * the `--secret` option to `docker swarm join` has been pulled from 1.12 final. A related discussion includes [this issue](https://github.com/docker/docker/issues/24430). Workaround may include playing around (didn't test yet) `MANAGER_JOIN_TOKEN="$(docker swarm join-token -q manager)"` and `MANAGER_JOIN_TOKEN="$(docker swarm join-token -q worker)"`.
